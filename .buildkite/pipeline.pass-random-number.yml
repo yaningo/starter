@@ -9,3 +9,7 @@ steps:
 
   - label: ":desktop_computer:"
     command: ./src/fetch-and-display-number.sh
+
+  - command: "echo parallel test"
+    label: "Test %n"
+    parallelism: 5
