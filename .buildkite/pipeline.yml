@@ -15,6 +15,7 @@ steps:
     key: deploy
     depends_on: test
 
+steps:
   - input: "How many Deployment will you do?"
     key: "check-input"
     fields:
