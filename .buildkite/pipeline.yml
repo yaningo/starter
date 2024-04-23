@@ -1,6 +1,6 @@
 steps:
   - input: "How many Deployment will you do?"
-    key: "check-input"
+    key: "check_input"
     fields:
       - select: "Number of Deployements"
         key: "deployment-total"
