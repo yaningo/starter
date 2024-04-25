@@ -6,6 +6,9 @@ steps:
           run: app
           config: ./src/docker-compose.yml
 
+  - label: "Show host Kernel Version"
+    command: "uname -a"
+
   - label: "Passing Environment Variables"
     plugins:
       - docker-compose:
