@@ -31,6 +31,6 @@ steps:
   - label: ":pipeline: Pipeline upload"
     command: buildkite-agent pipeline upload .buildkite/pipeline.yml
     
-  - command: echo "Billy Bob"
+  - command: echo "Billy Bobby"
     label: teststests
     if: build.branch == pipeline.default_branch
