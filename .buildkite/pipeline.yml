@@ -29,4 +29,4 @@
 steps:    
   - command: echo "Billy Bobby"
     label: teststests
-    if: build.branch == pipeline.default_branch
+    if: build.branch != pipeline.default_branch
