@@ -1,27 +1,32 @@
+# steps:
+#   - input: "How many Deployment will you do?"
+#     key: "check_input"
+#     fields:
+#       - select: "Number of Deployements"
+#         key: "deployment-total"
+#         options:
+#           - label: "1"
+#             value: "1"
+#           - label: "2"
+#             value: "2"
+
+#       - select: "Which Environments?"
+#         key: "environment-type"
+#         hint: "Which release stream does this belong in? :fork:"
+#         multiple: true
+#         options:
+#           - label: "Staging"
+#             value: "staging"
+#           - label: "Production"
+#             value: "prod"
+#           - label: "Dev"
+#             value: "dev"
+
+#   - command: src/test.sh
+#     label: "Display step"
+#     depends_on: check_input
+
 steps:
-  - input: "How many Deployment will you do?"
-    key: "check_input"
-    fields:
-      - select: "Number of Deployements"
-        key: "deployment-total"
-        options:
-          - label: "1"
-            value: "1"
-          - label: "2"
-            value: "2"
-
-      - select: "Which Environments?"
-        key: "environment-type"
-        hint: "Which release stream does this belong in? :fork:"
-        multiple: true
-        options:
-          - label: "Staging"
-            value: "staging"
-          - label: "Production"
-            value: "prod"
-          - label: "Dev"
-            value: "dev"
-
-  - command: src/test.sh
-    label: "Display step"
-    depends_on: check_input
+    - command: echo "Billy Bob"
+      label: tests
+      if: build.branch == pipeline.default_branch
