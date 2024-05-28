@@ -26,11 +26,7 @@
 #     label: "Display step"
 #     depends_on: check_input
 
-steps:
-
-  - label: ":pipeline: Pipeline upload"
-    command: buildkite-agent pipeline upload .buildkite/pipeline.yml
-    
+steps:    
   - command: echo "Billy Bobby"
     label: teststests
     if: build.branch == pipeline.default_branch
