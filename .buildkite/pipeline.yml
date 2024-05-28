@@ -27,6 +27,10 @@
 #     depends_on: check_input
 
 steps:
-    - command: echo "Billy Bob"
-      label: teststests
-      if: build.branch == pipeline.default_branch
+
+  - label: ":pipeline: Pipeline upload"
+    command: buildkite-agent pipeline upload .buildkite/deploy.yml
+    
+  - command: echo "Billy Bob"
+    label: teststests
+    if: build.branch == pipeline.default_branch
