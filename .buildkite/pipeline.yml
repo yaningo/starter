@@ -28,5 +28,5 @@
 
 steps:
     - command: echo "Billy Bob"
-      label: tests
+      label: testseuh
       if: build.branch == pipeline.default_branch
