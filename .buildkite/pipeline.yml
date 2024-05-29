@@ -29,4 +29,9 @@
 steps:    
   - command: echo "Billy Bobby"
     label: teststeststests
-    if: build.branch == pipeline.default_branch
+    notify:
+      - slack: "FlamingoStrange#general"
+
+notify:
+  # Notify channel
+  - slack: "FlamingoStrange#general"
