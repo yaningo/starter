@@ -28,7 +28,7 @@
 
 steps:
 
-  - label: Hello Kitty
+  - label: Hello Kitty!
     command: buildkite-agent pipeline upload .buildkite/pipeline.yml
 
   - label: Hello Kitty
