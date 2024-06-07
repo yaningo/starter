@@ -27,6 +27,10 @@
 #     depends_on: check_input
 
 steps:
+
+  - label: Hello Kitty
+    command: buildkite-agent pipeline upload .buildkite/pipeline.yml
+
   - label: Hello Kitty
     commands:
       - echo "HELLLOOOOOWWW KITTY"
