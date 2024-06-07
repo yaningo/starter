@@ -35,7 +35,7 @@ steps:
   - label: "Example Script"
     commands:
       - echo "script.sh"
-      - exit 1
+      - exit 155
     key: my-script
     
   - wait:
