@@ -26,12 +26,25 @@
 #     label: "Display step"
 #     depends_on: check_input
 
-steps:    
-  - command: echo "Billy Bobby"
-    label: teststeststests
-    notify:
-      - slack: "FlamingoStrange#general"
+steps:
+  - label: Hello Kitty
+    commands:
+      - echo "HELLLOOOOOWWW KITTY"
+      
+  - label: "Example Script"
+    command: "script.sh"
+    key: my-script
+    
+  - wait:
+    continue_on_failure: true
+    
 
-notify:
-  # Notify channel
-  - slack: "FlamingoStrange#general"
+  - label: Maybe Custom Status
+    command: command: |
+      if [ $$(buildkite-agent step get "outcome" --step "my-script") == "failed" ]; then
+         cat <<- YAML | buildkite-agent pipeline upload
+         notify:
+           - github_commit_status:
+               context: "my-custom-status"
+      YAML
+      fi
