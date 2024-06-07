@@ -28,7 +28,7 @@
 
 steps:
 
-  - label: Hello Kitty
+  - label: Hello Kitty!
     commands:
       - echo "HELLLOOOOOWWW KITTY"
       
