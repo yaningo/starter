@@ -33,7 +33,7 @@ steps:
       - echo "HELLLOOOOOWWW KITTY"
       
   - label: "Example Script"
-    command: "script.sh"
+    command: echo "script.sh"
     key: my-script
     
   - wait:
