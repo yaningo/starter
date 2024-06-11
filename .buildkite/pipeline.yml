@@ -44,7 +44,7 @@ steps:
 
   - label: Maybe Custom Status
     command: |
-      if [ $$(buildkite-agent step get "outcome" --step "my-script") == "failed" ]; then
+      if [ $$(buildkite-agent step get "outcome" --step "my-script") == "hard_failed" ]; then
          cat << YAML | buildkite-agent pipeline upload
           notify:
             - github_commit_status:
@@ -52,6 +52,6 @@ steps:
       YAML
       fi
 
-notify:
-  - github_commit_status:
-      context: "my-other-status"
+# notify:
+#   - github_commit_status:
+#       context: "my-other-status"
