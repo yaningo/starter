@@ -48,7 +48,7 @@ steps:
          cat << YAML | buildkite-agent pipeline upload
           notify:
             - github_commit_status:
-                context: "my-custom-status"
+                context: "my-custom-status-is-great"
       YAML
       fi
 
